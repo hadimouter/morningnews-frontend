@@ -27,7 +27,7 @@ function Header() {
 	}, []);
 
 	const handleRegister = () => {
-		fetch('https://morningnews-backend-mu.vercel.app/users/signup', {
+		fetch('http://morningnews-backend-wine.vercel.app/users/signup', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ username: signUpUsername, password: signUpPassword }),
@@ -44,7 +44,7 @@ function Header() {
 
 	const handleConnection = () => {
 
-		fetch('https://morningnews-backend-mu.vercel.app/users/signin', {
+		fetch('http://morningnews-backend-wine.vercel.app/users/signin', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ username: signInUsername, password: signInPassword }),
@@ -122,7 +122,7 @@ dispatch(removeHiddenArticles());
 			<div className={styles.logoContainer}>
 				<Moment className={styles.date} date={date} format="MMM Do YYYY" />
 				<h1 className={styles.title}>Morning News</h1>
-				<FontAwesomeIcon onClick={() => remontrer()} icon={faEye}  className={styles.faEye} />
+				
 				{userSection}
 				
 			</div>
